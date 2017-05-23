@@ -10,5 +10,33 @@
       <img src="images/image3.jpg" id="image3" />
       <img src="images/image4.jpg" id="image4" />
       <img src="images/image5.jpg" id="image5" />
+      <script>
+      var c = document.getElementsByTagName("img");
+var i;
+for (i = 0; i < c.length; i++) {
+  // var a = c[i].getAttribute("src");
+
+
+  c[i].onmouseenter = function() {
+    var imageName = this.getAttribute("src");
+    var imageNew = imageName.replace(".jpg", "_2.jpg");
+    // var imageNameLength = imageName.length;
+    // var imageOrigin = imageName.substring(0,imageName.length -4)
+    if (imageName.includes("_2") === false) {
+      this.setAttribute("src", imageNew);
+    }
+  };
+
+  c[i].onmouseleave = function() {
+    var imageName = this.getAttribute("src");
+    var imageNew = imageName.replace("_2.jpg", ".jpg");
+    // var imageNameLength = imageName.length;
+    // var imageOrigin = imageName.substring(0,imageName.length -4)
+    if (imageName.includes("_2") === true ) {
+      this.setAttribute("src", imageNew);
+    }
+  };
+}
+      </script>
   </body>
 </html>

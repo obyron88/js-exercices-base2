@@ -6,5 +6,17 @@
   </head>
   <body>
       <img src="images/image1.jpg" id="image1" />
+      <script>
+document.getElementById("image1").onmouseover = function() {mouseOver()};
+document.getElementById("image1").onmouseout = function() {mouseOut()};
+
+function mouseOver(){
+  document.getElementById("image1").src= "images/image1_2.jpg";
+}
+function mouseOut(){
+  document.getElementById("image1").src= "images/image1.jpg";
+}
+
+      </script>
   </body>
 </html>

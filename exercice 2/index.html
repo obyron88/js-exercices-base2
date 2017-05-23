@@ -7,6 +7,12 @@
 <body>
   <form>
     <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom"/>
+  <script>
+  document.getElementById("nom").onblur = function() {onBlur()};
+  function onBlur(){
+    alert("Merci de votre participation.");
+  }
+  </script>
   </form>
 </body>
 </html>
